@@ -1,0 +1,561 @@
+/* ==========================================================================
+   ICT251 Web Technologies - Activity 2 Stylesheet
+   Student: Achizima Marvelous Mpashi (202511543)
+   Institution: Mulungushi University
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Reset & Base Element Selectors
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    color: #1e293b; /* Slate 800 */
+    background-color: #f1f5f9; /* Slate 100 */
+    padding: 0;
+    margin: 0;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #1e3a8a; /* Deep blue */
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3b82f6;
+    letter-spacing: -0.3px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 0.6rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Images and Videos Responsive Fit */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Header & Banner
+   -------------------------------------------------------------------------- */
+header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #93c5fd; /* Soft Blue */
+    margin-bottom: 0.35rem;
+}
+
+.institution {
+    font-size: 0.92rem;
+    color: #cbd5e1; /* Slate 300 */
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Navigation Bar
+   -------------------------------------------------------------------------- */
+nav {
+    background-color: #0f172a; /* Slate 900 */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+}
+
+.nav-list a {
+    display: inline-block;
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+/* Hover and Focus States */
+.nav-list a:hover,
+.nav-list a:focus {
+    background-color: #2563eb; /* Primary Blue */
+    color: #ffffff;
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.external-nav-item a {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #38bdf8;
+}
+
+.external-nav-item a:hover,
+.external-nav-item a:focus {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   4. Main Content Layout & Box Model Styling
+   -------------------------------------------------------------------------- */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+/* Class Selector for repeated sections (demonstrates Box Model: margin, padding, border) */
+.content-section {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin: 1.75rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* ID Selector for unique section styling (#hobbies) */
+#hobbies {
+    background-color: #f8fafc;
+    border-left: 6px solid #2563eb;
+}
+
+/* ID Selector for unique section styling (#about) */
+#about {
+    border-top: 4px solid #1e3a8a;
+}
+
+.about-container p:last-child {
+    margin-bottom: 0;
+}
+
+/* Hobbies and Skills Layout */
+.hobbies-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.hobbies-block,
+.skills-block {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.hobbies-block ul,
+.skills-block ol {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.hobbies-block li,
+.skills-block li {
+    margin-bottom: 0.65rem;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   5. Data Table Styling (My Learning Plan)
+   -------------------------------------------------------------------------- */
+.table-container {
+    overflow-x: auto;
+    margin-top: 1.25rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.schedule-table caption {
+    caption-side: top;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #1e3a8a;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.schedule-table th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* --------------------------------------------------------------------------
+   6. Photo Gallery Grid
+   -------------------------------------------------------------------------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    margin-top: 1.25rem;
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.gallery-item figcaption {
+    padding: 1rem 1.1rem;
+    font-size: 0.92rem;
+    color: #334155;
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+.gallery-item figcaption strong {
+    color: #1e3a8a;
+    font-size: 1rem;
+}
+
+.photo-credit {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   7. Media Players (Video & Audio)
+   -------------------------------------------------------------------------- */
+.media-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+    margin-top: 1.25rem;
+}
+
+.media-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+.player-wrapper {
+    background-color: #0f172a;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-wrapper video {
+    width: 100%;
+    max-height: 280px;
+    outline: none;
+}
+
+.player-wrapper audio {
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.media-transcript {
+    background-color: #ffffff;
+    border-left: 3px solid #3b82f6;
+    padding: 0.85rem 1rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.88rem;
+    color: #334155;
+}
+
+.media-transcript h4 {
+    font-size: 0.9rem;
+    color: #1e3a8a;
+    margin-bottom: 0.35rem;
+}
+
+.audio-notes {
+    font-size: 0.88rem;
+    color: #475569;
+    background-color: #ffffff;
+    border-left: 3px solid #10b981;
+    padding: 0.85rem 1rem;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. Contact Form
+   -------------------------------------------------------------------------- */
+.form-wrapper {
+    max-width: 650px;
+    margin-top: 1.25rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: #1e293b;
+    margin-bottom: 0.35rem;
+}
+
+.required-star {
+    color: #dc2626;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #1e293b;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Form Hover & Focus States */
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.submit-btn {
+    align-self: flex-start;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    outline: none;
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-disclaimer {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   9. Footer
+   -------------------------------------------------------------------------- */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2.2rem 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-container p {
+    margin-bottom: 0.4rem;
+}
+
+.footer-container strong {
+    color: #e2e8f0;
+}
+
+.back-to-top a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-to-top a:hover,
+.back-to-top a:focus {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+/* --------------------------------------------------------------------------
+   10. Responsive Media Queries (Mobile & Tablet)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .content-section {
+        padding: 1.4rem 1.1rem;
+    }
+
+    .hobbies-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .media-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 280px;
+    }
+
+    .nav-list {
+        gap: 0.35rem;
+    }
+
+    .nav-list a {
+        font-size: 0.88rem;
+        padding: 0.4rem 0.65rem;
+    }
+}
