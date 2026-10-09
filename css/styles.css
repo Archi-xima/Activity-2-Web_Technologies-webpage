@@ -1064,6 +1064,11 @@ footer {
     color: #e7e5e4;
 }
 
+.footer-note {
+    font-style: italic;
+    color: #c9c2b8 !important;
+}
+
 .source-link a,
 .back-to-top a {
     display: inline-block;
