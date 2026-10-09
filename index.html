@@ -3,62 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Achizima Marvelous Mpashi, a Data Science student at Mulungushi University. ICT251 Web Technologies coursework.">
     <title>Achizima Marvelous Mpashi | ICT251 Personal Student Website</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============================== HERO / HEADER ============================== -->
+    <header class="hero" id="home">
         <div class="header-container">
+            <p class="kicker">ICT251 Web Technologies &bull; Activity 3</p>
             <h1>Achizima Marvelous Mpashi</h1>
-            <p class="subtitle">Student Number: <strong>202511543</strong> | ICT251 Web Technologies</p>
+            <p class="subtitle">Bachelor of Science in Data Science &bull; Student Number: <strong>202511543</strong></p>
             <p class="institution">Mulungushi University &bull; School of Engineering and Technology &bull; Computer Science Department</p>
+            <p class="hero-intro">
+                I am an undergraduate student who enjoys building clean, accessible web pages and turning ideas
+                into small, useful applications. This site collects my hobbies, my learning plan, my projects,
+                and the media I created for this course.
+            </p>
+            <a class="hero-btn" href="#projects">View My Projects</a>
         </div>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav aria-label="Main Navigation">
-        <ul class="nav-list">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#hobbies">My Hobbies</a></li>
-            <li><a href="#learning-plan">My Learning Plan</a></li>
-            <li><a href="#photos">My Photos</a></li>
-            <li><a href="#media">My Media</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="external-nav-item"><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener noreferrer">MDN Web Docs Tutorials &UpperRightArrow;</a></li>
-        </ul>
+    <!-- ============================== NAVIGATION ============================== -->
+    <nav aria-label="Main navigation">
+        <div class="nav-bar">
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+                Menu
+            </button>
+            <ul class="nav-list" id="nav-menu">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#hobbies">My Hobbies</a></li>
+                <li><a href="#learning-plan">My Learning Plan</a></li>
+                <li><a href="#projects">Projects &amp; Skills</a></li>
+                <li><a href="#photos">My Photos</a></li>
+                <li><a href="#media">My Media</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-tool-item">
+                    <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+                        <span class="theme-toggle-label">Dark theme</span>
+                    </button>
+                </li>
+                <li class="external-nav-item">
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener noreferrer">MDN Web Docs Tutorials &UpperRightArrow;</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
+    <!-- ============================== MAIN CONTENT ============================== -->
+    <main id="main-content">
 
-        <!-- About Me Section -->
+        <!-- ---------------------- About Me ---------------------- -->
         <section id="about" class="content-section">
             <h2>About Me</h2>
             <div class="about-container">
                 <p>
-                    Hello and welcome to my personal website! My name is <strong>Achizima Marvelous Mpashi</strong>, 
-                    with Student Number <strong>202511543</strong>. I am an undergraduate student at 
-                    <strong>Mulungushi University</strong> pursuing Computer Science within the School of Engineering and Technology. 
-                    I am actively studying <em>ICT251 Web Technologies</em>, where I am gaining comprehensive skills in creating structured, 
-                    accessible, and responsive web pages. I have a profound enthusiasm for modern software development, logic design, 
-                    and creating interactive systems that solve everyday problems in society. Through consistent practice and dedication, 
-                    my ambition is to build scalable digital platforms and contribute meaningfully to the growing technology ecosystem in Zambia and beyond.
+                    Hello and welcome to my personal website! My name is <strong>Achizima Marvelous Mpashi</strong>,
+                    with Student Number <strong>202511543</strong>. I am an undergraduate student at
+                    <strong>Mulungushi University</strong> pursuing Data Science within the School of Engineering and
+                    Technology. I am actively studying <em>ICT251 Web Technologies</em>, where I am gaining
+                    comprehensive skills in creating structured, accessible, and responsive web pages. I have a
+                    profound enthusiasm for modern software development, logic design, and creating interactive
+                    systems that solve everyday problems in society. Through consistent practice and dedication, my
+                    ambition is to build scalable digital platforms and contribute meaningfully to the growing
+                    technology ecosystem in Zambia and beyond.
                 </p>
-                <p>
-                    This web page represents my coursework project for Activity 2, demonstrating progressive enhancement from our initial introductory HTML page into a complete multi-section layout.
-                </p>
+
+                <div class="expandable" id="about-more" hidden>
+                    <p>
+                        This page is my Activity 3 coursework. It builds on the single-page layout I created in
+                        Activity 2 by adding hand-written JavaScript, a projects section, an accessible navigation
+                        menu, and a validated contact form that never leaves the browser.
+                    </p>
+                    <p>
+                        Outside of coursework I play guitar, read, and watch films. I am currently practising Git
+                        workflows, responsive layout techniques, and basic data handling with Python so that I can
+                        contribute to real team projects after graduation.
+                    </p>
+                </div>
+
+                <button type="button" class="expand-btn" id="about-toggle" aria-expanded="false" aria-controls="about-more">
+                    Read more
+                </button>
             </div>
         </section>
 
-        <!-- My Hobbies & Skills Improvement Section -->
+        <!-- ---------------------- My Hobbies ---------------------- -->
         <section id="hobbies" class="content-section">
             <h2>My Hobbies</h2>
             <div class="hobbies-wrapper">
                 <div class="hobbies-block">
                     <h3>My Top 3 Hobbies</h3>
-                    <p>My top 3 hobbies preserved from Activity 1:</p>
+                    <p>Three hobbies I have kept from Activity 1:</p>
                     <ul>
                         <li>Playing guitar</li>
                         <li>Reading</li>
@@ -68,7 +109,7 @@
 
                 <div class="skills-block">
                     <h3>Steps to Improve My Web Skills</h3>
-                    <p>Realistic action plan I am following to advance my technical capabilities:</p>
+                    <p>The realistic action plan I am following to advance my technical capabilities:</p>
                     <ol>
                         <li><strong>Consistent Coding Practice:</strong> Dedicate 45 minutes each day to writing clean, valid HTML5 and hand-coded CSS layouts.</li>
                         <li><strong>Project-Based Building:</strong> Develop functional front-end mini-projects and track revision history using Git and GitHub.</li>
@@ -78,10 +119,17 @@
             </div>
         </section>
 
-        <!-- My Learning Plan Section -->
+        <!-- ---------------------- My Learning Plan ---------------------- -->
         <section id="learning-plan" class="content-section">
             <h2>My Learning Plan</h2>
-            <p>A structured breakdown of my weekly schedule for learning and practicing web technologies:</p>
+            <p>Three steps I follow every week while learning and practising web technologies:</p>
+            <ol class="steps-list">
+                <li><strong>Learn the concept:</strong> Read the MDN page or lecture notes and note down the three most important points.</li>
+                <li><strong>Build something small:</strong> Re-create the example in a scratch file, then adapt it to this website.</li>
+                <li><strong>Review and commit:</strong> Check the page at mobile and desktop widths, fix any console errors, and push the work to GitHub with a clear message.</li>
+            </ol>
+
+            <p class="table-intro">A structured breakdown of my weekly schedule:</p>
             <div class="table-container">
                 <table class="schedule-table">
                     <caption>Weekly Web Technologies Study &amp; Practice Plan</caption>
@@ -111,14 +159,85 @@
                         <tr>
                             <td>Saturday</td>
                             <td>Responsive Testing &amp; Git Version Control</td>
-                            <td>Test responsive behavior on mobile viewports and commit assignment milestones to GitHub.</td>
+                            <td>Test responsive behaviour on mobile viewports and commit assignment milestones to GitHub.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- My Photos Section -->
+        <!-- ---------------------- Projects & Skills ---------------------- -->
+        <section id="projects" class="content-section">
+            <h2>Projects &amp; Skills</h2>
+            <p>
+                Six small projects that show what I can build so far. Use the category buttons or the search box to
+                narrow the list, and press <strong>Reset</strong> to show everything again.
+            </p>
+
+            <div class="filter-controls" role="group" aria-label="Filter projects by category">
+                <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+                <button type="button" class="filter-btn" data-filter="programming" aria-pressed="false">Programming</button>
+                <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data</button>
+
+                <label for="project-search" class="search-label">Search:</label>
+                <input type="search" id="project-search" class="search-input" placeholder="e.g. CSS" autocomplete="off">
+
+                <button type="button" class="filter-reset" id="filter-reset">Reset</button>
+            </div>
+
+            <p class="filter-status" id="filter-status" role="status">Showing 6 of 6 projects.</p>
+
+            <ul class="project-grid" id="project-grid">
+                <li class="project-card" data-category="web" data-tags="html css responsive portfolio">
+                    <h3>Personal Portfolio Website</h3>
+                    <p class="project-meta">Category: Web</p>
+                    <p>A multi-section static site written by hand, with semantic HTML, an external stylesheet, and responsive layouts.</p>
+                    <p class="project-skills"><strong>Skills used:</strong> semantic HTML5, CSS flexbox and grid, media queries</p>
+                </li>
+
+                <li class="project-card" data-category="web" data-tags="javascript form validation accessibility">
+                    <h3>Validated Contact Form</h3>
+                    <p class="project-meta">Category: Web</p>
+                    <p>A JavaScript contact form that checks name, email, and message inputs and previews the result without reloading the page.</p>
+                    <p class="project-skills"><strong>Skills used:</strong> events, <code>preventDefault()</code>, regular expressions, ARIA</p>
+                </li>
+
+                <li class="project-card" data-category="programming" data-tags="java console loops">
+                    <h3>Student Grade Tracker</h3>
+                    <p class="project-meta">Category: Programming</p>
+                    <p>A console program that stores marks in an array, calculates the average, and reports the highest and lowest score.</p>
+                    <p class="project-skills"><strong>Skills used:</strong> Java, arrays, loops, methods</p>
+                </li>
+
+                <li class="project-card" data-category="programming" data-tags="javascript calculator validation numbers">
+                    <h3>Study Hours Calculator</h3>
+                    <p class="project-meta">Category: Programming</p>
+                    <p>A small tool that multiplies daily study hours by the number of days and rejects negative or empty input.</p>
+                    <p class="project-skills"><strong>Skills used:</strong> JavaScript functions, input validation, DOM output</p>
+                </li>
+
+                <li class="project-card" data-category="data" data-tags="python csv charts analysis">
+                    <h3>Class Survey Dashboard</h3>
+                    <p class="project-meta">Category: Data</p>
+                    <p>A short analysis of a class questionnaire: counts, averages, and a bar chart summarising the answers.</p>
+                    <p class="project-skills"><strong>Skills used:</strong> Python, pandas basics, chart reading</p>
+                </li>
+
+                <li class="project-card" data-category="data" data-tags="sql database records">
+                    <h3>Library Records Query Set</h3>
+                    <p class="project-meta">Category: Data</p>
+                    <p>Ten SQL queries written against a small library database to list overdue books, totals, and busiest days.</p>
+                    <p class="project-skills"><strong>Skills used:</strong> SQL SELECT, WHERE, GROUP BY, ORDER BY</p>
+                </li>
+            </ul>
+
+            <p class="no-matches" id="no-matches" hidden>
+                No projects match your filter. Try another category, clear the search box, or press Reset.
+            </p>
+        </section>
+
+        <!-- ---------------------- My Photos ---------------------- -->
         <section id="photos" class="content-section">
             <h2>My Photos</h2>
             <p>A curated gallery capturing academic experiences, presentations, and student moments at Mulungushi University:</p>
@@ -152,10 +271,10 @@
             </div>
         </section>
 
-        <!-- My Media Section -->
+        <!-- ---------------------- My Media ---------------------- -->
         <section id="media" class="content-section">
             <h2>My Media</h2>
-            <p>Multimedia components introducing myself and explaining my motivation for studying Web Technologies:</p>
+            <p>Multimedia components introducing myself and explaining my motivation for studying Web Technologies. Neither clip starts automatically; press play to start and pause to stop.</p>
 
             <div class="media-container">
                 <!-- Video Subsection -->
@@ -163,17 +282,19 @@
                     <h3>Self-Introduction Video</h3>
                     <p class="media-desc">A short video introducing my name, programme of study, and a web development skill I aim to master.</p>
                     <div class="player-wrapper">
-                        <video controls>
+                        <video controls preload="metadata">
                             <source src="videos/intro.mp4" type="video/mp4">
-                            Your browser does not support the video element.
+                            Your browser does not support the video element. You can read the summary below instead.
                         </video>
                     </div>
                     <div class="media-transcript">
-                        <h4>Video Summary (Accessibility Transcript):</h4>
+                        <h4>Video Summary (Accessibility Transcript)</h4>
                         <p>
-                            &ldquo;Hello everyone! My name is Achizima Marvelous Mpashi, and I am studying Computer Science at Mulungushi University. 
-                            In this ICT251 Web Technologies course, one key skill I hope to learn is building fully responsive, accessible web interfaces 
-                            and mastering modern CSS layout techniques. I look forward to applying these skills to solve real-world software engineering challenges.&rdquo;
+                            &ldquo;Hello everyone! My name is Achizima Marvelous Mpashi, and I am studying Computer
+                            Science at Mulungushi University. In this ICT251 Web Technologies course, one key skill I
+                            hope to learn is building fully responsive, accessible web interfaces and mastering modern
+                            CSS layout techniques. I look forward to applying these skills to solve real-world software
+                            engineering challenges.&rdquo;
                         </p>
                     </div>
                 </div>
@@ -183,65 +304,90 @@
                     <h3>Voice Clip: Passion &amp; Motivation</h3>
                     <p class="media-desc">A short audio recording describing my hobbies and why I chose to study web technologies.</p>
                     <div class="player-wrapper">
-                        <audio controls>
+                        <audio controls preload="none">
                             <source src="videos/voice.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
+                            Your browser does not support the audio element. You can read the summary below instead.
                         </audio>
                     </div>
                     <p class="audio-notes">
-                        <em>Recording Description:</em> In this audio clip, I describe how playing the acoustic guitar inspires creativity in programming, 
-                        and explain why mastering web technologies is an essential foundation for my future career in computer science.
+                        <strong>Audio Summary:</strong> In this clip I describe how playing the acoustic guitar inspires
+                        creativity in programming, and explain why mastering web technologies is an essential foundation
+                        for my future career in computer science.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- ---------------------- Contact ---------------------- -->
         <section id="contact" class="content-section">
             <h2>Contact Me</h2>
-            <p>Have an inquiry, study feedback, or wish to connect? Please submit a message using the form below:</p>
+            <p>Have an inquiry, study feedback, or wish to connect? Please complete the form below.</p>
+
+            <p class="demo-notice" id="demo-note">Browser demonstration only &mdash; no message is sent.</p>
 
             <div class="form-wrapper">
-                <form action="#" method="post" class="contact-form">
+                <form action="#" method="post" class="contact-form" id="contact-form" novalidate aria-describedby="demo-note">
                     <div class="form-group">
-                        <label for="contact-name">Full Name: <span class="required-star">*</span></label>
-                        <input type="text" id="contact-name" name="name" placeholder="Enter your full name" required>
+                        <label for="contact-name">Full Name: <span class="required-star" aria-hidden="true">*</span></label>
+                        <input type="text" id="contact-name" name="name" placeholder="Enter your full name"
+                               aria-required="true" aria-describedby="name-error">
+                        <span class="error-msg" id="name-error"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="contact-email">Email Address: <span class="required-star">*</span></label>
-                        <input type="email" id="contact-email" name="email" placeholder="example@domain.com" required>
+                        <label for="contact-email">Email Address: <span class="required-star" aria-hidden="true">*</span></label>
+                        <input type="email" id="contact-email" name="email" placeholder="example@domain.com"
+                               aria-required="true" aria-describedby="email-error">
+                        <span class="error-msg" id="email-error"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="contact-topic">Inquiry Topic:</label>
                         <select id="contact-topic" name="topic">
-                            <option value="project-collaboration">Project Collaboration</option>
-                            <option value="study-discussion">ICT251 Study Discussion</option>
-                            <option value="website-feedback">Website Feedback</option>
-                            <option value="general-inquiry">General Inquiry</option>
+                            <option value="Project Collaboration">Project Collaboration</option>
+                            <option value="ICT251 Study Discussion">ICT251 Study Discussion</option>
+                            <option value="Website Feedback">Website Feedback</option>
+                            <option value="General Inquiry">General Inquiry</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="contact-message">Your Message: <span class="required-star">*</span></label>
-                        <textarea id="contact-message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                        <label for="contact-message">Your Message: <span class="required-star" aria-hidden="true">*</span></label>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Type your message here..."
+                                  aria-required="true" aria-describedby="message-error"></textarea>
+                        <span class="error-msg" id="message-error"></span>
                     </div>
 
-                    <button type="submit" class="submit-btn">Send Message</button>
-                    <p class="form-disclaimer">Note: This form is a browser demonstration for ICT251 coursework and does not send data.</p>
+                    <button type="submit" class="submit-btn">Preview My Message</button>
                 </form>
+
+                <div class="form-preview" id="form-preview" hidden aria-live="polite">
+                    <h3>Message preview</h3>
+                    <p class="preview-note" id="preview-note"></p>
+                    <dl class="preview-list" id="preview-list">
+                        <dt>Name</dt><dd id="preview-name"></dd>
+                        <dt>Email</dt><dd id="preview-email"></dd>
+                        <dt>Topic</dt><dd id="preview-topic"></dd>
+                        <dt>Message</dt><dd id="preview-message"></dd>
+                    </dl>
+                    <p class="preview-footnote">This data was checked in your browser only. It was <strong>validated</strong>, not sent.</p>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer Section -->
+    <!-- ============================== FOOTER ============================== -->
     <footer>
         <div class="footer-container">
             <p>&copy; 2026 Achizima Marvelous Mpashi &bull; Student No: <strong>202511543</strong></p>
             <p>Mulungushi University &bull; School of Engineering and Technology &bull; Computer Science Department</p>
-            <p class="back-to-top"><a href="#about">&uparrow; Back to Top</a></p>
+            <p class="source-link">
+                <a href="https://github.com/Archi-xima/Activity-2-Web_Technologies-webpage" target="_blank" rel="noopener noreferrer">
+                    View Source on GitHub &UpperRightArrow;
+                </a>
+            </p>
+            <p class="back-to-top"><a href="#home">&uarr; Back to Top</a></p>
         </div>
     </footer>
 
